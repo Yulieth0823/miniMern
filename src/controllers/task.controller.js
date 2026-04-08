@@ -7,7 +7,7 @@ export async function getTasks(req, res) {
 
 export async function createTask(req, res) {
     const {title} = req.body
-    if (!title) return res.satatus(400). json({massege:" Titulo es requerido"})
+    if (!title) return res.status(400). json({massege:" Titulo es requerido"})
 
     const task = await Task.create({ title })
     res.status(201).json(task)
